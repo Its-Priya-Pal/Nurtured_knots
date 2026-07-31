@@ -1,20 +1,23 @@
-import Button from "./components/Button";
+import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero";
+import Products from "./sections/Products";
+import About from "./sections/About";
+import WhyChooseUs from "./sections/WhyChooseUs";
+import FAQ from "./sections/FAQ";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6">
-      <h1
-        className="text-5xl font-bold"
-        style={{ fontFamily: "Playfair Display" }}
-      >
-        Nurtured Knots 🧶
-      </h1>
-
-      <p className="text-lg text-center max-w-md">
-        Handmade crochet creations crafted with love.
-      </p>
-
-      <Button>Shop Collection</Button>
+    <div className="bg-[#FFF9F4] text-[#3A2E2E] overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Products />
+      <About />
+      <WhyChooseUs />
+      <FAQ />
+      <Contact />
+      <Footer />
     </div>
   );
 }
