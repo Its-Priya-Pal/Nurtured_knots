@@ -1,7 +1,15 @@
+import Container from "../components/Container";
+
 export default function Footer() {
   return (
-    <section className="min-h-screen flex items-center justify-center" id="footer">
-      <h1 className="text-4xl font-bold">Footer Section</h1>
-    </section>
+    <footer className="border-t border-gray-200 bg-white py-6">
+      <Container>
+        <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-gray-500 md:flex-row">
+          <p>© {new Date().getFullYear()} Nurtured Knots. All rights reserved.</p>
+
+          <p>Handcrafted with ❤️</p>
+        </div>
+      </Container>
+    </footer>
   );
 }
