@@ -1,24 +1,39 @@
 export default function ProductCard({ product }) {
   return (
-    <div className="overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="h-72 w-full object-cover transition-transform duration-500 hover:scale-105"
-      />
+    <div className="group cursor-pointer">
+      <div className="overflow-hidden rounded-3xl bg-[#FFF9F4]">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="
+            h-44
+            w-full
+            object-cover
+            transition-all
+            duration-500
+            group-hover:scale-105
 
-      <div className="p-5">
-        <h3
-          className="text-xl font-semibold"
-          style={{ fontFamily: "Playfair Display" }}
-        >
-          {product.name}
-        </h3>
+            sm:h-52
 
-        <p className="mt-2 text-[#C97B84] font-medium">
-          {product.price}
-        </p>
+            lg:h-60
+          "
+        />
       </div>
+
+      <h3
+        className="
+          mt-3
+          text-center
+          text-sm
+          font-medium
+          text-[#3A2E2E]
+
+          sm:text-base
+        "
+        style={{ fontFamily: "Playfair Display" }}
+      >
+        {product.name}
+      </h3>
     </div>
   );
 }

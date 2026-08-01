@@ -5,14 +5,36 @@ import { products } from "../data/products";
 
 export default function Products() {
   return (
-    <section id="products" className="py-24">
-      <Container>
+    <section
+      id="products"
+      className="bg-white py-16 md:py-20 lg:py-24"
+    >
+      <Container className="max-w-7xl">
+        {/* Keep your current title */}
         <SectionTitle
-          title="Our Creations"
-          subtitle="Each piece is handcrafted with love, making every creation unique and special."
+          title="Explore Our Collection"
+          subtitle="Handcrafted crochet bouquets, gifts, and accessories made with love."
         />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Product Grid */}
+        <div
+          className="
+            mt-12
+            grid
+            grid-cols-2
+            gap-x-4
+            gap-y-8
+
+            sm:gap-x-5
+            sm:gap-y-10
+
+            md:grid-cols-3
+
+            lg:grid-cols-4
+
+            xl:grid-cols-5
+          "
+        >
           {products.map((product) => (
             <ProductCard
               key={product.id}
